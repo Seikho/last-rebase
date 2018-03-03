@@ -18,7 +18,14 @@ export default async function init() {
 
   await restoreAsync()
   const cfg = db.get()
+
   if (!cfg.token) {
+    const token = process.env.API_TOKEN
+    if (token) {
+      db.set('token', token)
+      return
+    }
+
     console.error('API_TOKEN not set')
     process.exit(1)
   }

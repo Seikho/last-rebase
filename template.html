@@ -11,24 +11,19 @@
 
 <body>
   <span class="date">Last rebase: $LAST_REBASE_DATE</span>
-  <div class="count">
-    <div style="position: absolute; left: 50%; top: 50%; transform: translateY(-50%);">
-      <strong>$LAST_REBASE_DAYS</strong>
-    </div>
-  </div>
+  <strong>$LAST_REBASE_DAYS</strong>
 </body>
 
 <style>
   body {
+    display: flex;
+    justify-content: center;
     font-family: 'Courier New', Courier, monospace;
-    height: 100vh;
   }
 
-  .count {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    text-align: center;
+  strong {
+    display: block;
+    align-self: center;
     font-size: 20em
   }
 
