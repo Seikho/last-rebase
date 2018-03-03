@@ -1,0 +1,25 @@
+{
+  "name": "lastrebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/needle": "^2.0.2",
+    "@types/node": "^9.4.6",
+    "prettier": "^1.11.1",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "needle": "^2.2.0",
+    "webscaledb": "^0.1.6"
+  }
+}
