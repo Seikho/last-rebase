@@ -13,3 +13,5 @@ ENV NODE_ENV=development \
     API_TOKEN=
 
 RUN yarn && yarn build
+
+CMD [ "node", "." ]
