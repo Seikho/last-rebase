@@ -17,7 +17,7 @@ After cloning:
 
 ```sh
 > docker build rebase:latest .
-> docker run -dt -p 3000:3000 --volume /yourconfig/folder:/code/data --env TOKEN=yourtoken --restart=always --name rebase rebase:latest
+> docker run -dt -p 3000:3000 --volume /yourconfig/folder:/code/data --env API_TOKEN=yourtoken --restart=always --name rebase rebase:latest
 > open http://localhost:3000
 ```
 
