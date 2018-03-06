@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import * as fs from 'fs'
 import * as db from 'webscaledb'
+import { backupAsync } from './config'
 
 const APP_ENV = process.env.APP_ENV
 const template = getTemplate()
@@ -37,6 +38,7 @@ router.post('/rebase', (req, res) => {
   }
 
   db.set('rebase', new Date().toISOString())
+  backupAsync()
   res.status(200).json({ message: 'Successful' })
 })
 

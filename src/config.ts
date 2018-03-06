@@ -42,3 +42,15 @@ function restoreAsync() {
     })
   })
 }
+
+export function backupAsync() {
+  return new Promise<void>((resolve, reject) => {
+    db.backup(DB_NAME, err => {
+      if (err) {
+        return reject(err)
+      }
+
+      return resolve()
+    })
+  })
+}
