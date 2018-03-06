@@ -12,6 +12,10 @@ ENV NODE_ENV=development \
     APP_ENV=prd \
     API_TOKEN=
 
-RUN yarn && yarn build
+RUN apk --update add tzdata \
+    && echo "Australia/Perth" > /etc/timezone \
+    && cp /usr/share/zoneinfo/Australia/Perth \
+    && yarn \
+    && yarn build
 
 CMD [ "node", "." ]

@@ -32,7 +32,7 @@ router.post('/rebase', (req, res) => {
   const actualToken = db.get('token')
 
   if (providedToken !== actualToken) {
-    res.status(400).json({ message: 'Unauthorized' })
+    res.status(401).json({ message: 'Unauthorized' })
     return
   }
 

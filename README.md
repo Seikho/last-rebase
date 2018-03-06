@@ -9,7 +9,7 @@ After cloning:
 ```sh
 > yarn
 > yarn build
-> TOKEN=yourtoken node .
+> API_TOKEN=yourtoken node .
 > open http://localhost:3000
 ```
 
