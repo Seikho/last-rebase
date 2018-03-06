@@ -14,7 +14,7 @@ ENV NODE_ENV=development \
 
 RUN apk --update add tzdata \
     && echo "Australia/Perth" > /etc/timezone \
-    && cp /usr/share/zoneinfo/Australia/Perth \
+    && cp /usr/share/zoneinfo/Australia/Perth /etc/localtime \
     && yarn \
     && yarn build
 
